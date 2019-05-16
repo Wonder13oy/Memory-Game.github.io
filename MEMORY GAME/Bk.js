@@ -10,7 +10,7 @@ function flipCard() {
   if (this === firstCard) return;//prevents the user from double clicking on the same card
   this.classList.add('flip');
 
- //Stops the user from flipping the same card twice
+  //Stops the user from flipping the same card twice
   if (!hasFlippedCard) {
     hasFlippedCard = true;
     firstCard = this;
@@ -55,7 +55,7 @@ function resetBoard() {
   [firstCard, secondCard] = [null, null];
 }
 
-//To randomise the positions of the cards on the board  --> Learnt this syntax on ES6(Call right after creating function)
+//To randomise the positions of the cards on the board
 (function shuffle() {
   cards.forEach(card => {
     let randomPos = Math.floor(Math.random() * 12);
